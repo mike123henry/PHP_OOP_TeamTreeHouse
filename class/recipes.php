@@ -10,7 +10,7 @@ class Recipe
     private $source = "Mike Henry";
 
     private $measurements = array(
-        "tsp", "tbsp", "cups", "oz", "lb", "fl oz", "pint", "quart", "gallon"
+        "tsp", "tbsp", "cup", "oz", "lb", "fl oz", "pint", "quart", "gallon"
         );
 
     public function __construct($title = null)
