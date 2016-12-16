@@ -2,15 +2,13 @@
 include "class/recipes.php";
 include "class/render.php";
 
-$recipe1 = new Recipe();
+$recipe1 = new Recipe("the first recipe");
 $recipe1->setSource("Grandma Henry");
-$recipe1->setTitle("the first recipe");
 $recipe1->addIngredient("egg", 1);
 $recipe1->addIngredient("flour", 2, "cups");
 
-$recipe2 = new Recipe();
+$recipe2 = new Recipe("Yet another recipe");
 $recipe2->setSource("Betty Crocker");
-$recipe2->setTitle ("Yet another recipe");
 
 // echo $recipe1->getTitle();
 // foreach ($recipe1->getIngredients() as $ing) {
@@ -37,5 +35,10 @@ $recipe1->setYield("6 servings");
 // echo $recipe1->getSource();
 // echo "\n";
 
-echo Render::displayRecipe($recipe1);
+//echo Render::displayRecipe($recipe1);
+echo "\n";
+echo $recipe1;
+echo "\n";
+echo new Render();
+echo "\n";
 ?>
