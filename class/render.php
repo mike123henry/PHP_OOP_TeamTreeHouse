@@ -7,6 +7,26 @@ class render
         $output .=  implode("\n", get_class_methods(__CLASS__));
         return $output;
     }
+
+    public static function listShopping($ingredient_list)
+    {
+        ksort($ingredient_list);
+        return implode("\n", array_keys($ingredient_list));
+    }
+
+    public static function listRecipes($titles)
+    {
+        asort($titles);
+        $output = "";
+        foreach($titles as $key=>$title){
+            if($output != ""){
+                $output .= "\n";
+            }
+            $output .= "[$key] $title";
+        }
+        return $output;
+    }
+
     public static function listIngredients($ingredients)
     {
         foreach($ingredients as $ing){
@@ -32,5 +52,6 @@ class render
         $output .= "\n";
         return $output;
     }
+
 }
 ?>
